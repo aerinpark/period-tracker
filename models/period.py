@@ -11,6 +11,9 @@ class Period:
 
     """
     def __init__(self, start_date: datetime.date, end_date: datetime.date,):
+        if end_date and end_date < start_date:
+            raise ValueError("End date cannot be earlier than start date")
+
         self.start_date = start_date
         self.end_date = end_date
         self.days = []
