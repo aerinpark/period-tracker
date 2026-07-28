@@ -1,5 +1,5 @@
 import datetime
-from period_day import PeriodDay
+from models.period_day import PeriodDay
 
 class Period:
     """
@@ -10,7 +10,7 @@ class Period:
     - daily records containing flow, symptoms, and additional notes
 
     """
-    def __init__(self, start_date: datetime.date, end_date: datetime.date,):
+    def __init__(self, start_date: datetime.date, end_date: datetime.date):
         if end_date and end_date < start_date:
             raise ValueError("End date cannot be earlier than start date")
 
